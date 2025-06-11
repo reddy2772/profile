@@ -1,0 +1,16 @@
+.profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.container{
+    display : flex;
+}
+
+.left{
+    text-align: center;
+    padding: 30px;
+}
+
