@@ -12,22 +12,27 @@
             <img src="profilepp.jpg" class="profile"> 
             <h2> Jane Doe </h2>
             <p> Web Developer and designer </p>
+            <br>
         </div>
 
         <div class="right">
             <h2> Jane Doe </h2>
             <p> Web Developer and Designer </p>
             <p> Passionate about creating interactive experiences. </p>
-            <p> Skills: HTML , CSS , JavaScript </p>
-            <p> Hobbies: Reading, Cycling </p>
-            
-            <button id="toggleButton" onclick="toggleContent()">Show More</button>
-         
-            <form>
-                <input type="text" id="name" name="name" placeholder="Your Name">
-                <input type="text" id="mess" name="mess" placeholder="Your Message">
-                <button onclick="regards()"> Send </button>
 
+            <div id="addcontent" style="display:none;">
+                <p><span class="icon">⚙️</span> Skills: HTML, CSS, Javascript</p>
+                <p><span class="icon">🎯</span> Hobbies: Reading, Cycling</p>          
+            </div>
+
+            <button id="contentshow" onclick="contentShow()">Show More</button>
+            <h3>Send Message </h>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <input type="text" id="mess" name="mess" placeholder="Your Message" required>
+                <br>
+                <button onclick="regards()" id="sendContent"> Send </button>
             </form>
         </div>
         </div>

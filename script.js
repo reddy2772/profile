@@ -2,7 +2,7 @@ function contentShow() {
     const content = document.getElementById('addcontent');
     const button = document.getElementById('contentshow');
 
-    if (content.style.display === 'none' || content.style.display === '') {
+    if (content.style.display === 'none') {
         content.style.display = 'block';
         button.textContent = 'Show Less';
 

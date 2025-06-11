@@ -1,16 +1,68 @@
+body{
+    background-color: white;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
 .profile{
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover; 
+    flex-wrap: wrap;
 }
 
 .container{
     display : flex;
+    align-items: stretch; 
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
 
 .left{
     text-align: center;
     padding: 30px;
+    border-right : 1px solid black;
 }
 
+.right{
+    padding: 30px;
+    flex: 2;
+}
+
+form {
+    display: flex;
+    flex-direction:column;
+
+}
+
+form input{
+    padding: 10px;
+    margin: 5px;
+}
+@media (max-width : 768px) {
+    .container{
+        flex-direction:column;
+        text-align: center;
+    }
+     .left {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .right {
+        text-align: center;
+    }
+   
+}
+.icon {
+    margin-right: 4px;
+}
+
+form button{
+    background-color: navy;
+    color: white;
+    border: none;
+    padding : 10px;
+
+}
