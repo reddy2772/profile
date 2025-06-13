@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Profile </title>
-        <link href="style.css" rel="stylesheet">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-        <div class="left">
-            <div class="ppic"></div>
-            <img src="profilepp.jpg" class="profile"> 
-            <h2> Jane Doe </h2>
-            <p> Web Developer and designer </p>
-            <br>
-        </div>
+<head>
+<title> Bootstrap profile </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .card {
+        display: flex;
+    }
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+    }
+    .separator {
+        width: 2px;
+        background-color:whitesmoke;
+    }
 
-        <div class="right">
-            <h2> Jane Doe </h2>
-            <p> Web Developer and Designer </p>
-            <p> Passionate about creating interactive experiences. </p>
-
-            <div id="addcontent" style="display:none;">
-                <p><span class="icon">⚙️</span> Skills: HTML, CSS, Javascript</p>
-                <p><span class="icon">🎯</span> Hobbies: Reading, Cycling</p>          
+</style>
+</head>
+<body class="container my-5">
+    <div class="card flex-row">
+    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
+    <img src="profilepp.jpg" alt="Profile" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+    <h2 class="mt-3 fw-bold">Jane Doe</h2>
+    <p class="text-muted">Web Developer and Designer</p>
+</div>
+        <div class="separator"></div>
+        <div class="right-section">
+            <h2 class="fw-bold">Jane Doe</h2>
+            <p>Web Developer and Designer</p>
+            <p>Passionate about creating interactive experiences.</p>
+            <div id="addcontent" style="display: none;">
+                <p><span>⚙️</span> Skills: HTML, CSS, JavaScript</p>
+                <p><span>🎯</span> Hobbies: Reading, Cycling</p>
             </div>
-
-            <button id="contentshow" onclick="contentShow()">Show More</button>
-            <h3>Send Message </h>
+            <button id="contentshow" class="btn btn-light border mb-3 btn-sm" style="width: 100px;" onclick="contentShow()">Show More</button>
+            <h4 class="fw-bold">Send Message</h4>
             <form>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
-                <input type="text" id="mess" name="mess" placeholder="Your Message" required>
-                <br>
-                <button onclick="regards()" id="sendContent"> Send </button>
+                <div class="mb-3">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" id="mess" name="mess" class="form-control" placeholder="Your Message" required>
+                </div>
+
+                <button type="button" onclick="regards()" id="sendContent" class="btn btn-primary w-100">Send</button>
             </form>
         </div>
-        </div>
-    </body>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
