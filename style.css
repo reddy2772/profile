@@ -1,291 +1,99 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#heading{
+    text-align: center;
+    color : white ;
+    margin-top: 50px;
+    margin-bottom : 5px;
+    font-weight: 400;
+}
+#sub{
+    text-align: center;
+    color: white ;
+    margin-bottom: 30px;
+    font-style : italic;
+    margin-top: 0px;
+    font-weight: 400;
 }
 
 body{
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+   linear-gradient(rgba(120, 80, 200, 0.7), rgba(120, 80, 200, 0.7)),
+   url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-header{
-    display: flex;
-    border-bottom: 1px solid black;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-}
-#heading{
-    font-size: 20px;
-    opacity: 40%;
-}
-#subtitle{
-    font-size: 30px;
-}
 
-.im{
-    height: 40px;
-    width:50px;
-    object-fit: cover;
-    display:block;
-}
-.menu{
+.form{
     display:flex;
-    gap: 20px;
-}
-
-.profile{
-    display:flex;
-    align-items: center;
-    gap:10px;
-}
-
-.logo{
-    font-size: 20px;
-    display:flex;
-    align-items: center;
-    font-weight: bold;
-
-}
-
-.avatar{
-    height:25px;
-    width:25px;
-    border-radius: 50%;
-    background-color: blueviolet;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.left-side{
-    display:flex;
-    align-items: center;
-    gap:10px;
-}
-
-.right-side{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-a{
-    color:black;
-    text-decoration: none;
-    font-weight: 500;
-    margin-right: 20px;
-    transition : color 0.3s;
-}
-
-.menulink.active{
-    color: #007BFF;
-    font-weight: bold;
-    border-bottom: 2px solid #007BFF;
-}
-
-.pricing{
-    text-align: center;
-    margin-top: 30px;
-}
-
-.pricingcontainer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center; 
-    gap: 20px;
-}
-#basic-head, #space{
-    height: 120px;
-    margin: 0;
-    padding: 0;
-}
-.index{
-    width:auto;
-    padding:20px;
-}
-#basic{
-    font-size: 20px;
-    margin-bottom: 0%;
-    padding: 0;
-    color:orange;
-}
-.basicplan{
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    height:500px;
-    padding: 20px;
-}
-.packageopti{
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    gap:30px;
-}
-
-.packagecard {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    gap:10px;
-    width: 600px;
-}
-
-
-.package-left h4 {
-    color: rgb(30, 148, 244);
-    line-height: 1.6;
-
-}
-
-.package-left span {
-    background-color:rgb(251, 180, 0, 0.2);
-    color:  rgb(251, 180, 0);
-    padding : 5px;
-    font-size: 14px;
-    border-radius: 4px;
-
-}
-
-
-.suto{
-    color: black;
-    font-size: 16px;
-}
-
-
-.footer-section{
-    display: flex;
-    align-items: center;   
-    flex-direction: column;
-    gap:10px;
-    margin-top: 30px;
-}
-
-.toggle-section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 20px;
+    padding : 40px;
+    border: 2px solid black;
+    background-color: rgba(27, 2, 50, 0.85);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width : 600px;
 }
 
-footer {
+.form-name , 
+.form-email ,
+.form-age , 
+.form-role , 
+.form-feature , 
+.form-sugg,
+.form-imp{
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap : 10px;
 }
 
-.first{
-    background-color:navy;
-    color:aliceblue;
-    padding: 10px 20px ; 
-    width: 350px;
+.radio-group{
+    display : flex;
+    flex-direction: column;
+}
+
+.checkbox-group{
+    display : flex;
+    flex-direction: column;
+}
+
+#name , #email , #age , #job , #feature , #message{
+    padding : 10px;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-ul{
-    line-height:40px;
-    list-style-type:none;
-    margin:0px;
-    padding:10%;
-}
-
-.package-savings {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.package-left{
-    width: 150px;
-    align-items: center;
-    font-size: 15px;
-}
-
-.package-center {
-    width:150px;
-    text-align: right;
-    align-items: center;
-    font-size: 15px;
-    
-}
-
-.package-right{
-    text-align: right;
-    width: 150px;
-    align-items: center;
-    margin:0px;
-    padding: 0%;
-    font-size: 15px;
-}
-.vertical-line {
-    width: 1px;
-    height: 100px;
-    background-color: #ccc;
-}
-
-.radio{
-    margin-left: 3%;
-}
-
-.sub-total{
-    color: rgb(126, 122, 122);
-    
-}
-.total{
-    color: rgb(126, 122, 122);
-}
-td{
-   padding:10px;
-}
-
-.packagecard input[type="radio"] {
-    width: 18px;
-    height: 18px;
-}
-
-.packagecard:has(input[type="radio"]:checked) {
-    border-color: blue;
-    background-color:whitesmoke;
-}
-
-footer {
-    display:flex;
-    flex-direction: column;
-    margin-top: 45px;
-}
-
-.second{
-    border: none;
-    padding: 10px;
-    background-color: white;
-}
-
-.final{
-    font-size: 16px;
-
-
-}
-.final span{
-    background-color:rgb(251, 180, 0, 0.2);
-    color:  rgb(251, 180, 0);
-    padding : 5px;
-    font-size: 14px;
     border-radius: 4px;
-    margin-bottom: 30px;
+    width: 570px;
 }
 
-.icon {
-        font-size: 20px;
-        margin-right: 10px;
-    }
+button {
+    background-color: green;
+    padding : 10px;
+    width: 590px;
+}
 
-.tick {
-        color: green;
-    }
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  box-sizing: border-box;
+}
 
-.cross {
-        color: red;
-    }
-
-.packagecard {
-        cursor: pointer;
-    }
+select {
+  color: gray;
+}
