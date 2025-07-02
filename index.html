@@ -1,124 +1,300 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Survey Form </title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+        <title> Welcome to Portfolio </title>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div>
-        <h1 id="heading"> freeCodeCamp Survey Form </h1>
-        <h4 id="sub"> Thank you for taking the time to help us improve the platform </h4>
+        <main class="container-fluid bg-success text-white py-5">
+        <nav class="navbar">
+            <div class="left"> PORTFOLIO </div>
+            <div class="middle">
+                <a href="#"> Home </a>
+                <a href="#"> My Work </a>
+                <a href="#"> Case Study </a>
+                <a href="#"> Live Site </a>
+            </div>
+            <div class="right">
+                <button class=" btn bg-warning"> Let's talk <i class="fas fa-arrow-right"></i> </button>
+            </div>
+        </nav>
+        <div class="row align-items-center">
+        <!-- Text (Left) -->
+        <div class="col-md-6 px-5">
+        <p><span class="anderson bg-warning"> ✦ WELCOME TO PORTFOLIO ✦ </span></p>
+        <h1 class="heading1">WELCOME TO <br>
+            MY PORTFOLIO</h1>
+        <h1 class="heading1">I AM <span class="anderson bg-warning">ANDERSON</span></h1>
+        <p id="para2">Live workshop where we define the main problems and <br> challenges before building a strategic plan moving forward.</p>
+        <button class="anderson2 bg-warning"> View My Work <i class="fas fa-arrow-right"></i> </button>
         </div>
-        <form class="form">
-            <div class="form-name">
-            <label for="name"> Name </label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+        <!-- Image (Right) -->
+        <div class="col-md-6 text-center">
+        <img src="anderson.jpg" alt="Anderson" class="img-anderson">
+        </div>
+        </div>
+        </main>
+    
+            <div class="project py-5">
+            <p> <span class="anderson bg-warning"> ✦ MY PROJECT ✦ </p>
+            <h1 id="heading"> Some of my <br> projects </h1>
+            <div class="container">
+                <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 ">
+                    <div class="card w-100 h-100">
+                        <img src="siem.jpg" class="card-img" alt="Siem">
+                        <div class="card-body">
+                            <h6 class="fw-bold"> Website Design for SIEM Platform </h6>
+                            <p class="text-muted small"> Konoom represents a cutting-edge SaaS platform meticulously designed to provide multi-location brands.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="card w-100 h-100">
+                        <img src="ai.jpg" class="card-img" alt="AI">
+                        <div class="card-body">
+                            <h6 class="fw-bold"> AI-based Social network for educators </h6>
+                            <p class="text-muted small"> Multi-location brands faced difficulties in efficiently managing customer reviews and ratings across various online platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Card 3 -->
+                <div class="col-md-6">
+                    <div class="card w-100 h-100">
+                        <img src="nft.jpg" class="card-img" alt="nft">
+                        <div class="card-body">
+                            <h6 class="fw-bold"> NFT Buy and Sell Platform</h6>
+                            <p class="text-muted small"> In the research phase, we comprehensively study user needs, behaviours, and 
+                                pain points through methods like interviews.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Card 4 -->
+                <div class="col-md-6">
+                    <div class="card w-100 h-100">
+                        <img src="review.jpg" class="card-img" alt="Review">
+                        <div class="card-body">
+                            <h5 class="fw-bold"> Review and Web Traffic Management </h5>
+                            <p class="text-muted small"> In the implementation phase, we focus on translating the designed user interface 
+                                into a functional product, adhering.</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="form-email">
-            <label for="email"> Email </label>
-            <input type="text" name="email" id="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-age">
-            <label for="age"> Age(optional) </label>
-            <input type="number" name="age" id="age" placeholder="Age">
-            </div>
-            <div class="form-role">
-            Which option best describes your current role?
-            <select id="job" name="job" required>
-                <option value = "" disabled selected hidden> Select current role </option>
-                <option value="student"> Student </option>
-                <option value="fulltimejob"> Full Time Job </option>
-                <option value="fulltimelearner"> Full Time Learner </option>
-                <option value="prefernottosay"> Prefer Not To Say </option>  
-                <option value="others"> Others </option>                  
-            </select>
-            </div>
-            <div>
-            Would you recommend freeCodeCamp to a friend?
-            <div class="radio-group">
-            <label><input type="radio" name="recommend" value="Definitely"> Definitely</label>
-            <label><input type="radio" name="recommend" value="Maybe"> Maybe</label>
-            <label><input type="radio" name="recommend" value="Not sure"> Not sure</label>
-            </div>
-            </div>
-            </div>
-            <div class="form-feature">
-            What is your favourite feature of freeCodeCamp?
-            <select id="feature" name="feature">
-                <option value = "" disabled selected hidden> Select an option </option>
-                <option value="challenges"> Challenges </option>
-                <option value="projects"> Projects </option>
-                <option value="community"> Community </option>
-                <option value="opensource"> Open Source </option>                 
-            </select>
-            </div>
-            <div class="form-imp">
-            What would you like to see improved? (Check all that apply)
-            <div class="checkbox-group">
-            <label><input type="checkbox" name="fro" value="Front-end Projects"> Front-end Projects</label>
-            <label><input type="checkbox" name="bac" value="Back-end Projects"> Back-end Projects</label>
-            <label><input type="checkbox" name="data" value="Data Visualization"> Data Visualization</label>
-            <label><input type="checkbox" name="cha" value="Challenges"> Challenges</label>
-            <label><input type="checkbox" name="osc" value="Open Source Community"> Open Source Community</label>
-            <label><input type="checkbox" name="vid" value="Videos"> Videos</label>
-            <label><input type="checkbox" name="city" value="City Meetups"> City Meetups</label>
-            <label><input type="checkbox" name="wiki" value="Wiki"> Wiki</label>
-            <label><input type="checkbox" name="forum" value="Forum"> Forum</label>
-            <label><input type="checkbox" name="addc" value="Additional Courses"> Additional Courses</label>
-            </div>
-            </div>
-            <div class="form-sugg">
-            Any comments or suggestions?
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your comment here..."></textarea>
-            </div>
-            <div>
-            <button type="submit" id="submitBtn" disabled> Submit </button>
             </div>
 
-        </form>
+                <div class="work-services">
+                <p> <span class="anderson bg-warning"> ✦ Work Services ✦ </p>
+                <h1 id="service"> My Services </h1>
+                <div class="container py-4">
+                    <div class="row g-4">
+                        <!--CArd 1 -->
+                        <div class="col-12">
+                        <div class="card bg-success text-white flex-row align-items-center">
+                        <div class="card-body col-md-8">
+                        <h5 class="card-title"> UI/UX Designing </h5>
+                        <p class="card-text"> We create professional, visually appealing logos that are both simple and <br>
+                            user-friendly. Our designs prioritize search engine optimization and <br>
+                            enhance user experience, ensuring that your brand stands out. </p>
+                        <div class="text-start">
+                        <a href="#" class="btn btn-warning"> View My Work <i class="fas fa-arrow-right"></i> </a>
+                        </div>
+                        </div>
+                        <img src="serv1.jpg" class="serv1-design">
+                        </div>
+                        </div>
+                        
+                        <!-- Card 2-->
+                        <div class="col-12">
+                        <div class="card flex-row align-items-center">
+                        <div class="card-body col-md-8">
+                        <h5 class="card-title"> Development </h5>
+                        <p class="card-text"> Innovative, user-centered, intuitive, engaging, seamless, responsive,<br>
+                            streamlined, interactive, efficient, aesthetic, accessible, functional,<br>
+                            reliable, personalized,delightful,strategic,comprehensive,agile. </p>
+                        <div class="text-start">
+                        <a href="#" class="btn btn-warning"> Read Details <i class="fas fa-arrow-right"></i> </a>
+                        </div>
+                        </div>
+                        <img src="serv2.jpg" class="serv2-design">
+                        </div>
+                        </div>
 
-        <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector(".form");
-        const submitBtn = document.getElementById("submitBtn");
+                        <div class="col-12">
+                        <div class="card flex-row align-items-center">
+                        <div class="card-body col-md-8">
+                        <h5 class="card-title"> Product Design </h5>
+                        <p class="card-text"> We're looking for a Junior-Mid-level Designer to join our team. You'll<br>
+                            support the execution of graphic and digital design projects, working<br>
+                            closely with the internal team. </p>
+                        <div class="text-start">
+                        <a href="#" class="btn btn-warning"> Read Details <i class="fas fa-arrow-right"></i> </a>
+                        </div>
+                        </div>
+                        <img src="serv3.jpg" class="serv3-design">
+                        </div>
+                        </div>
 
-        const name = document.getElementById("name");
-        const email = document.getElementById("email");
-        const job = document.getElementById("job");
-        const feature = document.getElementById("feature");
-        const radios = form.querySelectorAll('input[name="recommend"]');
-        const checkboxes = form.querySelectorAll('.checkbox-group input[type="checkbox"]');
+                        <div class="col-12">
+                        <div class="card flex-row align-items-center">
+                        <div class="card-body col-md-8">
+                        <h5 class="card-title"> Motion Design </h5>
+                        <p class="card-text"> Internal team of creatives, project managers, the Creative Director and<br>
+                            development team to blend user needs and buisness goals into<br>
+                            seamless,effective design experiences. </p>
+                        <div class="text-start">
+                        <a href="#" class="btn btn-warning"> Read Details <i class="fas fa-arrow-right"></i> </a>
+                        </div>
+                        </div>
+                        <img src="serv4.jpg" class="serv4-design">
+                        </div>
+                        </div>
+                    </div>
 
-        function validateEmail(emailValue) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
-    }
+                </div>
+            </div>
 
-        function isRadioChecked() {
-        return Array.from(radios).some(r => r.checked);
-    }
+            <div class="wel2po">
+            <div class="container">
+            <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+            <img src="anderson.jpg" alt="Anderson" class="img-anderson">
+            </div>
+            <div class="col-md-6 px-5">
+            <p> <span class="greenbg bg-success"> ✦ WELCOME TO PORTFOLIO ✦ </span> </p>
+            <h2> Lead product designer and art director.</h2>
+            <p> We transitioned our expertise to frontier science to ensure our work yields a tangiblec, positive impact on humanity. By focusing on innovative solutions, we aim to drive meaningful change that enhances lives and fosters sustainable development.</p>
+            <div class="stat-container">
+            <div class="stat-box"> 42+<span>Project Served</span></div>
+            <div class="stat-box"> 11+<span>Startup Partner</span></div>
+            <div class="stat-box"> 11K+<span>User Served</span></div>
+            </div>
 
-        function isCheckboxChecked() {
-        return Array.from(checkboxes).some(cb => cb.checked);
-    }
+            </div>
+         </div>
+        </div>
+        </div>
 
-        function validateForm() {
-        const isNameValid = name.value.trim() !== "";
-        const isEmailValid = validateEmail(email.value);
-        const isJobSelected = job.value.trim() !== "";
-        const isFeatureSelected = feature.value.trim() !== "";
-        const isRadioValid = isRadioChecked();
-        const isCheckboxValid = isCheckboxChecked();
+        <div>
+            <h1 id="head"> Skills and Tools For Those<br>
+                Looking for </h1>
+            <div class="container py-5">
+            <div class="row text-center">
+            <div class="col-md-3">
+            <div class="p-3 bg-warning rounded">
+            <img src="ui.jpg" class="skillpic">
+            <p> UI/UX Design </p>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="p-3 bg-warning rounded">
+            <img src="graphic-design.jpg" class="skillpic">
+            <p> Graphic Design </p>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="p-3 bg-warning rounded">
+            <img src="illustration.jpg" class="skillpic">
+            <p> Illustration </p>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="p-3 bg-warning rounded">
+            <img src="motion-design.jpg" class="skillpic">
+            <p> Motion Design </p>
+            </div>
+            </div>
+            </div>
+            </div>
 
-        const allValid = isNameValid && isEmailValid && isJobSelected && isFeatureSelected && isRadioValid && isCheckboxValid;
+            <div class="static-tags bg-warning">
+            <span>Web Design ✦ App Design ✦ Saas Product ✦ Dashboard ✦ Web App ✦ Product UI </span>
+            </div>
 
-        submitBtn.disabled = !allValid;
-    }
-    form.addEventListener("input", validateForm);
-    form.addEventListener("change", validateForm);
-    });
-    </script>
+
+            </div>
+
+            <div class="container-fluid bg-success py-5">
+                <div class="row">
+                <div class="col-md-4">
+                <h1 class="titles"> Let's Work <br> Together  </h1>
+                <p class="content"> Let's make your brand truly brilliant! 
+                    Together, we can create a powerful identity that stands out, resonates with your audience, and drives lasting impact.
+                     Your vision deserves to shine!</p>
+                </div>
+
+                <div class="col-md-8">
+                <div class="row g-3">
+                <div class="col-md-6">
+                <div class="p-4 bg-warning rounded custom-contact-box">
+                <p class="message">Looking For A One-time Project?</p>
+                <div class="email-line">
+                <span>Helloanderson@maria.com</span>
+                <span> <i class="fas fa-arrow-right"></i> </span>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="p-4 bg-warning rounded custom-contact-box">
+                <p class="message">Looking For A One-time Project?</p>
+                <div class="email-line">
+                <span>Helloanderson@maria.com</span>
+                <span> <i class="fas fa-arrow-right"></i> </span>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+            
+        </main>
+
+        <footer class="footer-section bg-success">
+            <div class="footer-container">
+
+                <div class="footer-left">
+                    <a href="#"> Home </a>
+                    <a href="#"> My Work </a>
+                    <a href="#"> Case Study </a>
+                    <a href="#"> Live Site </a>
+                </div>
+
+                <div class="footer-right">
+                    <a href="#"> UI/UX DESIGN </a>
+                    <a href="#"> WEB DESIGN </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-left2">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+
+                    <div class="footer-right2">
+                        &copy; 2024 Andersonmaria. All rights reserved.
+                    </div>
+                </div>
+        </footer>
 
     </body>
 </html>
